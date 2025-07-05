@@ -37,10 +37,10 @@ const Skills = () => {
   ];
 
   return (
-    <section className="py-16 pt-24 min-h-screen bg-white dark:bg-black">
-      <div className="max-w-6xl mx-auto px-4">
+    <section className="py-12 sm:py-16 pt-20 sm:pt-24 min-h-screen bg-white dark:bg-black">
+      <div className="max-w-6xl mx-auto w-full px-2 sm:px-4">
         <motion.div
-          className="text-center mb-12"
+          className="text-center mb-8 sm:mb-12"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
@@ -50,8 +50,7 @@ const Skills = () => {
             I've worked with a variety of technologies and tools. Here's a breakdown of my technical skills.
           </p>
         </motion.div>
-
-        <div className="max-w-5xl mx-auto px-8">
+        <div className="max-w-5xl mx-auto w-full px-2 sm:px-8">
           <HoverEffect items={projects} />
         </div>
       </div>

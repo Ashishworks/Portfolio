@@ -74,10 +74,10 @@ const Contact = () => {
 
   return (
     <TracingBeam className="w-full">
-      <section className="py-16 pt-24 min-h-screen bg-white dark:bg-black">
-        <div className="max-w-6xl mx-auto px-4">
+      <section className="py-12 sm:py-16 pt-20 sm:pt-24 min-h-screen bg-white dark:bg-black">
+        <div className="max-w-6xl mx-auto w-full px-2 sm:px-4">
           <motion.div
-            className="text-center mb-12"
+            className="text-center mb-8 sm:mb-12"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
@@ -87,17 +87,16 @@ const Contact = () => {
               I'm always interested in new opportunities, collaborations, and hackathons. Feel free to reach out!
             </p>
           </motion.div>
-
-          <motion.div 
-            className="grid lg:grid-cols-2 gap-12"
+          <motion.div
+            className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12"
             variants={containerVariants}
             initial="hidden"
             animate="visible"
           >
             {/* Contact Information with TextRevealCard */}
-            <motion.div variants={itemVariants} className="h-[40rem]">
+            <motion.div variants={itemVariants} className="h-auto lg:h-[40rem] mb-8 lg:mb-0">
               <div className="h-full flex flex-col items-center justify-center">
-                <h3 className="text-3xl md:text-4xl font-bold text-center mb-4 text-gray-800 dark:text-gray-100">Let's collaborate</h3>
+                <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-4 text-gray-800 dark:text-gray-100">Let's collaborate</h3>
                 <BlurText
                   text={contentPhrases[activeContent]}
                   delay={150}
@@ -105,31 +104,30 @@ const Contact = () => {
                   direction="top"
                   className={
                     (activeContent === 0 || activeContent === 2
-                      ? 'text-base md:text-lg mx-auto'
-                      : 'text-2xl md:text-3xl') +
+                      ? 'text-base sm:text-lg mx-auto'
+                      : 'text-xl sm:text-2xl md:text-3xl') +
                     ' font-semibold text-center text-gray-600 dark:text-gray-300 whitespace-pre-line'
                   }
                 />
               </div>
             </motion.div>
-
             {/* Contact Form */}
             <motion.div variants={itemVariants}>
-              <div className="shadow-input mx-auto w-full rounded-none bg-white p-4 md:rounded-2xl md:p-8 dark:bg-black">
-                <h2 className="text-xl font-bold text-neutral-800 dark:text-neutral-200">
+              <div className="shadow-input mx-auto w-full rounded-none bg-white p-3 sm:p-4 md:rounded-2xl md:p-8 dark:bg-black">
+                <h2 className="text-lg sm:text-xl font-bold text-neutral-800 dark:text-neutral-200">
                   Send Message
                 </h2>
                 <p className="mt-2 max-w-sm text-sm text-neutral-600 dark:text-neutral-300">
                   Fill out the form below and I'll get back to you as soon as possible
                 </p>
-                <form className="my-8" onSubmit={handleSubmit}>
+                <form className="my-6 sm:my-8" onSubmit={handleSubmit}>
                   <div className="mb-4 flex flex-col space-y-2 md:flex-row md:space-y-0 md:space-x-2">
                     <LabelInputContainer>
                       <Label htmlFor="firstname">First name</Label>
-                      <Input 
-                        id="firstname" 
+                      <Input
+                        id="firstname"
                         name="firstname"
-                        placeholder="Tyler" 
+                        placeholder="Tyler"
                         type="text"
                         value={formData.firstname}
                         onChange={handleChange}
@@ -138,10 +136,10 @@ const Contact = () => {
                     </LabelInputContainer>
                     <LabelInputContainer>
                       <Label htmlFor="lastname">Last name</Label>
-                      <Input 
-                        id="lastname" 
+                      <Input
+                        id="lastname"
                         name="lastname"
-                        placeholder="Durden" 
+                        placeholder="Durden"
                         type="text"
                         value={formData.lastname}
                         onChange={handleChange}
@@ -149,26 +147,23 @@ const Contact = () => {
                       />
                     </LabelInputContainer>
                   </div>
-                  <LabelInputContainer className="mb-8">
+                  <LabelInputContainer className="mb-6 sm:mb-8">
                     <Label htmlFor="email">Email Address</Label>
-                    <Input 
-                      id="email" 
+                    <Input
+                      id="email"
                       name="email"
-                      placeholder="projectmayhem@fc.com" 
+                      placeholder="projectmayhem@fc.com"
                       type="email"
                       value={formData.email}
                       onChange={handleChange}
                       className="bg-gray-50 dark:bg-zinc-900"
                     />
                   </LabelInputContainer>
-
                   <Button onClick={handleSendMessage}>
                     Send message
                   </Button>
-
-                  <div className="my-8 h-[1px] w-full bg-gradient-to-r from-transparent via-neutral-300 to-transparent dark:via-neutral-700" />
-
-                  <div className="flex flex-col space-y-4">
+                  <div className="my-6 sm:my-8 h-[1px] w-full bg-gradient-to-r from-transparent via-neutral-300 to-transparent dark:via-neutral-700" />
+                  <div className="flex flex-col space-y-3 sm:space-y-4">
                     <a
                       href="https://github.com/Ashishworks"
                       target="_blank"
