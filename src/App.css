@@ -1,0 +1,68 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    @apply bg-white dark:bg-black transition-colors duration-300;
+  }
+  
+  body {
+    @apply bg-white dark:bg-black text-gray-900 dark:text-gray-100 transition-colors duration-300;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply inline-flex items-center gap-2 px-6 py-3 rounded-lg font-medium no-underline transition-all duration-300 cursor-pointer border-none text-base;
+  }
+  
+  .btn-primary {
+    @apply bg-red-600 text-white hover:bg-red-700 hover:-translate-y-0.5 hover:shadow-lg;
+  }
+  
+  .btn-secondary {
+    @apply bg-transparent text-gray-900 dark:text-gray-100 border border-gray-300 dark:border-gray-600 hover:bg-gray-100 dark:hover:bg-gray-800 hover:border-red-600;
+  }
+  
+  .card {
+    @apply bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl p-6 shadow-md hover:-translate-y-1 hover:shadow-lg transition-all duration-300 cursor-pointer;
+  }
+  
+  .section-title {
+    @apply text-4xl md:text-5xl font-bold mb-8 bg-gradient-to-r from-red-600 to-red-800 bg-clip-text text-transparent;
+  }
+  
+  .section-subtitle {
+    @apply text-xl text-gray-600 dark:text-gray-400 mb-12 max-w-2xl;
+  }
+  
+  .sections-container {
+    scroll-behavior: smooth;
+  }
+  
+  .section-wrapper {
+    min-height: 100vh;
+    scroll-snap-align: start;
+  }
+}
+
+/* Custom dark scrollbar styles */
+/* For Chrome, Edge, and Safari */
+::-webkit-scrollbar {
+  width: 12px;
+  background: #111;
+}
+::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 6px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* For Firefox */
+html {
+  scrollbar-color: #333 #111;
+  scrollbar-width: thin;
+} 
