@@ -41,8 +41,7 @@ function MatrixCanvas({ className = "", color = "#00FF41" }) {
   );
 }
 
-export function EvervaultCard({ text }) {
-  const [hovered, setHovered] = React.useState(false);
+export function EvervaultCard({ hovered, setHovered, text }) {
   return (
     <div
       className="relative w-[28rem] h-56 bg-gradient-to-br from-gray-100 to-gray-300 dark:from-zinc-900 dark:to-zinc-800 rounded-xl shadow-lg flex flex-col group overflow-hidden transition-all duration-300 hover:scale-105"
@@ -73,7 +72,6 @@ export function Icon({ className = "" }) {
       strokeWidth={1.5}
       xmlns="http://www.w3.org/2000/svg"
     >
-      <rect x="6" y="10" width="12" height="8" rx="2" stroke="currentColor" strokeWidth="1.5" />
       <path d="M9 10V7a3 3 0 1 1 6 0v3" stroke="currentColor" strokeWidth="1.5" />
       <circle cx="12" cy="14" r="1.2" fill="currentColor" />
     </svg>
@@ -81,16 +79,17 @@ export function Icon({ className = "" }) {
 }
 
 export function EvervaultCardDemo() {
+  const [hovered, setHovered] = React.useState(false);
   return (
     <div
       className="border border-black/[0.2] dark:border-white/[0.2] flex flex-col items-center max-w-3xl mx-auto p-4 relative h-[30rem]">
-      <Icon className="absolute h-6 w-6 -top-3 -left-3 dark:text-white text-black" />
-      <Icon className="absolute h-6 w-6 -bottom-3 -left-3 dark:text-white text-black" />
-      <Icon className="absolute h-6 w-6 -top-3 -right-3 dark:text-white text-black" />
-      <Icon className="absolute h-6 w-6 -bottom-3 -right-3 dark:text-white text-black" />
-      <EvervaultCard />
+      <EvervaultCard hovered={hovered} setHovered={setHovered} />
       {/* Centered hello text in the empty area below the card */}
-      <div className="flex-1 flex items-center justify-center w-full">
+      <div className="flex-1 flex items-center justify-center w-full"
+        onMouseEnter={() => setHovered(true)}
+        onMouseLeave={() => setHovered(false)}
+        style={{ cursor: 'pointer' }}
+      >
         <span className="text-xl text-white opacity-40" style={{ fontFamily: "Georgia, serif" }}>Hover over the matrix</span>
       </div>
     </div>

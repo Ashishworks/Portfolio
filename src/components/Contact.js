@@ -87,7 +87,7 @@ const Contact = () => {
               I'm always interested in new opportunities, collaborations, and hackathons. Feel free to reach out!
             </p>
           </motion.div>
-          <motion.div
+          <motion.div 
             className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12"
             variants={containerVariants}
             initial="hidden"
@@ -124,10 +124,10 @@ const Contact = () => {
                   <div className="mb-4 flex flex-col space-y-2 md:flex-row md:space-y-0 md:space-x-2">
                     <LabelInputContainer>
                       <Label htmlFor="firstname">First name</Label>
-                      <Input
-                        id="firstname"
+                      <Input 
+                        id="firstname" 
                         name="firstname"
-                        placeholder="Tyler"
+                        placeholder="Your name" 
                         type="text"
                         value={formData.firstname}
                         onChange={handleChange}
@@ -136,10 +136,10 @@ const Contact = () => {
                     </LabelInputContainer>
                     <LabelInputContainer>
                       <Label htmlFor="lastname">Last name</Label>
-                      <Input
-                        id="lastname"
+                      <Input 
+                        id="lastname" 
                         name="lastname"
-                        placeholder="Durden"
+                        placeholder="Surname" 
                         type="text"
                         value={formData.lastname}
                         onChange={handleChange}
@@ -149,10 +149,10 @@ const Contact = () => {
                   </div>
                   <LabelInputContainer className="mb-6 sm:mb-8">
                     <Label htmlFor="email">Email Address</Label>
-                    <Input
-                      id="email"
+                    <Input 
+                      id="email" 
                       name="email"
-                      placeholder="projectmayhem@fc.com"
+                      placeholder="sendtoashish@gmail.com" 
                       type="email"
                       value={formData.email}
                       onChange={handleChange}

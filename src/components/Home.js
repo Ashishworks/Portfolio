@@ -88,7 +88,7 @@ const Home = () => {
               />
             </motion.div>
             <motion.h2 className="text-lg sm:text-2xl text-gray-600 dark:text-gray-400 mb-4 sm:mb-6 font-medium" variants={itemVariants}>
-              Full Stack Developer | MERN | AI Enthusiast
+              Full Stack Developer | MERN | Adapting AI
             </motion.h2>
             <motion.p className="text-base sm:text-lg text-gray-600 dark:text-gray-400 mb-6 sm:mb-8 leading-relaxed" variants={itemVariants}>
               I'm a passionate full stack developer skilled in building modern web applications using the MERN stack and beyond. 
@@ -109,7 +109,7 @@ const Home = () => {
               </motion.div>
               <motion.div variants={buttonVariants} whileHover="hover" whileTap="tap">
                 <a
-                  href="https://github.com/Ashishworks"
+                  href="https://drive.google.com/drive/folders/1nACkNM3fzLI-rMRW7i8wXpFhOe5dgQgp?usp=drive_link"
                   className="btn btn-secondary w-full sm:w-auto"
                   target="_blank"
                   rel="noopener noreferrer"

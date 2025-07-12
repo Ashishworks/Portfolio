@@ -20,7 +20,7 @@ const Skills = () => {
     { title: "Authentication", link: "#" },
     { title: "MongoDB", link: "#" },
     { title: "MySQL", link: "#" },
-    { title: "SQL", link: "#" },
+    { title: "Atlas", link: "#" },
     // Tools
     { title: "Axios", link: "#" },
     { title: "Git & GitHub", link: "#" },
