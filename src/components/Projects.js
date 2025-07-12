@@ -20,6 +20,7 @@ const Projects = () => {
       category: "fullstack",
       technologies: ["React", "Node.js", "MongoDB", "Express", "JWT"],
       liveUrl: "https://wanderlust-91l7.onrender.com/",
+      demoVideoUrl: "https://youtu.be/K0YKv8h57BI",
       githubUrl: "https://github.com/Ashishworks/Wanderlust",
       featured: true
     },
@@ -29,7 +30,7 @@ const Projects = () => {
       description: "PodPeek is an AI-powered podcast research assistant designed to help hosts and creators prepare smarter, more engaging interviews. It enables users to search for any well-known personality and instantly gathers real-time insights, including their biography, family background, controversial topics, recent updates, current projects, and even contact details like social media or official websites. PodPeek also generates a personalized, categorized podcast script with questions labeled as light, insightful, or controversial, which can be downloaded as a PDF. Additionally, users can enter any question number to generate three alternative phrasings using Together.ai, allowing for flexible and refined interview preparation.",
       image: "/PodPeek.png",
       category: "fullstack",
-      technologies: ["React", "Tailwind CSS", "Serper API", "Express.js"],
+      technologies: ["React", "Together AI", "Node.js", "Serper API", "Express.js"],
       liveUrl: "https://youtu.be/XGpxR_v1RtU",
       githubUrl: "https://github.com/Ashishworks/PodPeek.git",
       featured: false
@@ -42,6 +43,7 @@ const Projects = () => {
       category: "fullstack",
       technologies: ["React", "Node.js", "Mermaid.js", "Together AI", "jsPDF"],
       liveUrl: "https://planza-beta.vercel.app/",
+      demoVideoUrl: "https://youtu.be/Bd790G0opE0",
       githubUrl: "https://github.com/Ashishworks/PlanzaBeta",
       featured: false
     }
@@ -219,7 +221,7 @@ const Projects = () => {
 
                 <div className="flex justify-between">
                   <motion.a
-                    href={project.liveUrl}
+                    href={project.id === 1 || project.id === 3 ? project.demoVideoUrl : project.liveUrl}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center gap-2 text-red-600 hover:text-red-700 font-medium text-sm transition-colors duration-300"
@@ -227,7 +229,7 @@ const Projects = () => {
                     whileTap={{ scale: 0.95 }}
                   >
                     <Eye size={16} />
-                    View Live
+                    Quick Demo Video
                   </motion.a>
                   <motion.a
                     href={project.githubUrl}
