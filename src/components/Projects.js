@@ -31,7 +31,7 @@ const Projects = () => {
       image: "/PodPeek.png",
       category: "fullstack",
       technologies: ["React", "Together AI", "Node.js", "Serper API", "Express.js"],
-      liveUrl: "pod-peek.vercel.app",
+      liveUrl: "https://pod-peek.vercel.app",
       githubUrl: "https://github.com/Ashishworks/PodPeek.git",
       featured: false
     },
