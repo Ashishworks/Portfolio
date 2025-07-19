@@ -28,7 +28,7 @@ const Projects = () => {
       id: 2,
       title: "PodPeek",
       description: "PodPeek is an AI-powered podcast research assistant designed to help hosts and creators prepare smarter, more engaging interviews. It enables users to search for any well-known personality and instantly gathers real-time insights, including their biography, family background, controversial topics, recent updates, current projects, and even contact details like social media or official websites. PodPeek also generates a personalized, categorized podcast script with questions labeled as light, insightful, or controversial, which can be downloaded as a PDF. Additionally, users can enter any question number to generate three alternative phrasings using Together.ai, allowing for flexible and refined interview preparation.",
-      image: "/PodPeek2.png",
+      image: "/PodPeek3.png",
       category: "fullstack",
       technologies: ["React", "Together AI", "Node.js", "Serper API", "Express.js"],
       liveUrl: "https://pod-peek.vercel.app",
